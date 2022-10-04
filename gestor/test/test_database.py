@@ -1,9 +1,9 @@
 import csv
 import copy
-import gestor.config as config
+import config as config
 import unittest
-import gestor.database as db
-import gestor.helpers as helpers
+import database as db
+import helpers as helpers
 
 
 class TestDatabase(unittest.TestCase):
@@ -59,3 +59,6 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(dni, "28Z")
         self.assertEqual(nombre, "Mariana")
         self.assertEqual(apellido, "García")
+
+if __name__ == "__main__":
+    unittest.main()
