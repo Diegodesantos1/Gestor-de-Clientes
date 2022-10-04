@@ -1,6 +1,6 @@
-import menu
+import gestor.menu as menu
 from colorama import Fore
-from ui import MainWindow
+from gestor.ui import MainWindow
 
 def seleccionar():
    eleccion = int(input(Fore.LIGHTGREEN_EX + "Pulse 1 para ejecutarlo en terminal o 2 para ejecutarlo en interfaz gráfica\n > "))

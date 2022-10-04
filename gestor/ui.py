@@ -1,5 +1,5 @@
-import helpers
-import database as db
+import gestor.helpers as helpers
+import gestor.database as db
 from tkinter import *
 from tkinter import ttk
 from tkinter.messagebox import askokcancel, WARNING
