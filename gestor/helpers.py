@@ -24,5 +24,3 @@ def dni_valido(dni, lista):
             print("DNI utilizado por otro cliente.")
             return False
     return True
-
-

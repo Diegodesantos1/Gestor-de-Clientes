@@ -1,5 +1,5 @@
 import csv
-import gestor.config as config
+import config
 
 
 class Cliente:
