@@ -3,15 +3,13 @@ import copy
 import os
 import sys
 import inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir) 
 import config
 import helpers
 import unittest
 import database as db
-
-currentdir = os.path.dirname(os.path.abspath(
-    inspect.getfile(inspect.currentframe())))
-parentdir = os.path.dirname(currentdir)
-sys.path.insert(0, parentdir)
 
 
 class TestDatabase(unittest.TestCase):
@@ -67,7 +65,6 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(dni, '28Z')
         self.assertEqual(nombre, 'Mariana')
         self.assertEqual(apellido, 'García')
-
 
 if __name__ == '__main__':
     unittest.main()
