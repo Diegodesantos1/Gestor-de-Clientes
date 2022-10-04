@@ -62,7 +62,8 @@ class CreateClientWindow(Toplevel, CenterWidgetMixin):
         self.master.treeview.insert(
             parent='', index='end', iid=self.dni.get(),
             values=(self.dni.get(), self.nombre.get(), self.apellido.get()))
-        db.Clientes.crear(self.dni.get(), self.nombre.get(), self.apellido.get())
+        db.Clientes.crear(self.dni.get(), self.nombre.get(),
+                          self.apellido.get())
         self.close()
 
     def close(self):
@@ -76,7 +77,8 @@ class CreateClientWindow(Toplevel, CenterWidgetMixin):
         event.widget.configure({"bg": "Green" if valido else "Red"})
         # Cambiar el estado del botón en base a las validaciones
         self.validaciones[index] = valido
-        self.crear.config(state=NORMAL if self.validaciones == [1, 1, 1] else DISABLED)
+        self.crear.config(state=NORMAL if self.validaciones == [
+                          1, 1, 1] else DISABLED)
 
 
 class EditClientWindow(Toplevel, CenterWidgetMixin):
@@ -129,7 +131,8 @@ class EditClientWindow(Toplevel, CenterWidgetMixin):
         cliente = self.master.treeview.focus()
         self.master.treeview.item(cliente, values=(
             self.dni.get(), self.nombre.get(), self.apellido.get()))
-        db.Clientes.modificar(self.dni.get(), self.nombre.get(), self.apellido.get())
+        db.Clientes.modificar(
+            self.dni.get(), self.nombre.get(), self.apellido.get())
         self.close()
 
     def close(self):
@@ -142,7 +145,8 @@ class EditClientWindow(Toplevel, CenterWidgetMixin):
         event.widget.configure({"bg": "Green" if valido else "Red"})
         # Cambiar el estado del botón en base a las validaciones
         self.validaciones[index] = valido
-        self.actualizar.config(state=NORMAL if self.validaciones == [1, 1] else DISABLED)
+        self.actualizar.config(state=NORMAL if self.validaciones == [
+                               1, 1] else DISABLED)
 
 
 class MainWindow(Tk, CenterWidgetMixin):

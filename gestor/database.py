@@ -59,4 +59,5 @@ class Clientes:
         with open(config.DATABASE_PATH, 'w', newline='\n') as fichero:
             writer = csv.writer(fichero, delimiter=';')
             for cliente in Clientes.lista:
-                writer.writerow((cliente.dni, cliente.nombre, cliente.apellido))
+                writer.writerow(
+                    (cliente.dni, cliente.nombre, cliente.apellido))
