@@ -1,6 +1,11 @@
 import csv
 import copy
-from unicodedata import name
+import os
+import sys
+import inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir) 
 import config
 import helpers
 import unittest
@@ -61,5 +66,5 @@ class TestDatabase(unittest.TestCase):
         self.assertEqual(nombre, 'Mariana')
         self.assertEqual(apellido, 'García')
 
-if name == 'main':
+if __name__ == '__main__':
     unittest.main()
