@@ -1,4 +1,4 @@
-import gestor.menu as menu
+import menu as menu
 from colorama import Fore
 from ui import MainWindow
 
