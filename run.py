@@ -17,6 +17,4 @@ def seleccionar():
    if eleccion != 1 and eleccion != 2:
       print(Fore.RED + "Error, seleccione una opción válida" + Fore.RESET)
       seleccionar()
-   else:
-      seleccionar()
 seleccionar()

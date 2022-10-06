@@ -58,7 +58,7 @@ class TestDatabase(unittest.TestCase):
         db.Clientes.modificar('28Z', 'Mariana', 'García')
 
         dni, nombre, apellido = None, None, None
-        with open(config.DATABASE_PATH, newline='\n') as fichero:
+        with open("./gestor/clientes.csv", newline='\n') as fichero:
             reader = csv.reader(fichero, delimiter=';')
             dni, nombre, apellido = next(reader)
 
