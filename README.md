@@ -39,6 +39,10 @@ seleccionar()
 <h2 align="center">Código de los test</h2>
 
 El programa pasa los test correctamente:
+```python
+if __name__ == '__main__':
+    unittest.main()
+```
 
 ![image](https://user-images.githubusercontent.com/91721855/194380735-913f6e60-d721-4044-84d8-fc3da82c0b29.png)
 
