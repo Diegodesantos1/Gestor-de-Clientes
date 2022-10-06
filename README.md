@@ -34,11 +34,17 @@ def seleccionar():
 seleccionar()
 ```
 
+***
+
 <h2 align="center">Código de los test</h2>
 
 El programa pasa los test correctamente:
 
 ![image](https://user-images.githubusercontent.com/91721855/194380735-913f6e60-d721-4044-84d8-fc3da82c0b29.png)
+
+```python
+pytest -v
+```
 
 ![image](https://user-images.githubusercontent.com/91721855/194380877-3d654220-974b-4807-8c0f-5253e8a27f53.png)
 
